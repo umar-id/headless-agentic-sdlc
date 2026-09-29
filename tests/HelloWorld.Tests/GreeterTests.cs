@@ -16,6 +16,12 @@ public class GreeterTests
         Assert.Equal("Hello, Umar!", Greeter.Greet("Umar"));
     }
 
+    [Fact]
+    public void Greet_NameWithSurroundingSpaces_TrimsName()
+    {
+        Assert.Equal("Hello, Umar!", Greeter.Greet("  Umar  "));
+    }
+
     [Theory]
     [InlineData(null)]
     [InlineData("")]
